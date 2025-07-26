@@ -2,148 +2,213 @@
 # Author:https://github.com/czy13724
 # TG:https://t.me/@i_Levibot
 # 以 ';' 或 '#' 或 '//' 开头的配置文件行为注释行
-#
-# Stash Version ≥ 2.6.0 
-#
-# 最后更新时间: 2025-07-23
-#
+# Stash Version ≥ 3.1.0
+# 最后更新时间: 2025-07-26
 # ================
 
 mode: rule
-log-level: info       
-
+log-level: info
 dns:
   # 默认的域名解析服务器
   nameserver: [223.5.5.5, 119.29.29.29]
   # fake ip 白名单列表'以下地址不会下发fakeip映射用于连接
   fake-ip-filter: ['+.lan', '*', '+.local', '+.cmpassport.com', 'id6.me', 'open.e.189.cn', 'mdn.open.wo.cn', 'opencloud.wostore.cn', 'auth.wosms.cn', '+.10099.com.cn']
-
 # > 订阅信息展示
-subscribe-url: 
-
+subscribe-url: 订阅链接
 # > 远程服务器
 proxy-providers:
   Subscribe:
     interval: 86400
-    url: http://your-service-provider
+    url: 订阅链接
     benchmark-timeout: 5
-    benchmark-url: http://1.1.1.1/generate_204
-
+    benchmark-url: http://www.gstatic.com/generate_204
 proxy-groups:
-
   # 分流分组
-
-  - {name: 手动切换, icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/%24tash.png, type: select, include-all: true, proxies: [香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, DIRECT]}
-
-  - {name: 国外网站, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png, type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点]}
-
-  - {name: 国际媒体, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png, type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点]}
-
-  - {name: 微软服务, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png, type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点]}
-
-  - {name: 谷歌服务, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png, type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点]}
-
-  - {name: 电报消息, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png, type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点]}
-
-  - {name: 推特消息, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png, type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点]}
-
-  - {name: AI, icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png, type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点]}
-
-  - {name: 游戏平台, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png, type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, DIRECT]}
-
-  - {name: Emby, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png, type: select, include-all: true, proxies: [香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点]}
-
-  - {name: Spotify, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png, type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点]}
-
-  - {name: 兜底分流, icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/friestash.png, type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, DIRECT]}
-
+  - {name: 手动切换, icon: 'https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/%24tash.png', type: select, include-all: true, proxies: [香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, DIRECT]}
+  - {name: YouTube, icon: 'https://fastly.jsdelivr.net/gh/czy13724/LeviIcons@main/leviicons/youtube_02.png', type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点]}
+  - {name: 国际媒体, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png', type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点]}
+  - {name: Telegram, icon: 'https://fastly.jsdelivr.net/gh/czy13724/LeviIcons@main/leviicons/telegram_02.png', type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点]}
+  - {name: Google, icon: 'https://fastly.jsdelivr.net/gh/czy13724/LeviIcons@main/leviicons/Google.png', type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点]}
+  - {name: AI系列, icon: 'https://fastly.jsdelivr.net/gh/czy13724/LeviIcons@main/leviicons/ChatGPT1.png', type: select, proxies: [手动切换, 美国节点, 狮城节点, 日本节点, 台湾节点]}
+  - {name: 社交媒体, icon: 'https://fastly.jsdelivr.net/gh/czy13724/LeviIcons@main/leviicons/socialmediacollection01.png', type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点]}
+  - {name: TikTok, icon: 'https://fastly.jsdelivr.net/gh/czy13724/LeviIcons@main/leviicons/TikTok.png', type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点]}
+  - {name: Talkatone, icon: 'https://fastly.jsdelivr.net/gh/czy13724/LeviIcons@main/leviicons/Talkatone.png', type: select, include-all: true, proxies: [香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点]}
+  - {name: SafeUM, icon: 'https://fastly.jsdelivr.net/gh/czy13724/LeviIcons@main/leviicons/SafeUM.png', type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, DIRECT]}
+  - {name: 指定加速, icon: 'https://fastly.jsdelivr.net/gh/czy13724/LeviIcons@main/leviicons/Panda.png', type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点]}
+  - {name: BiliBili, icon: 'https://fastly.jsdelivr.net/gh/czy13724/LeviIcons@main/leviicons/BiliBili_02.png', type: select, proxies: [香港节点, 台湾节点, DIRECT]}
+  - {name: Spotify, icon: 'https://fastly.jsdelivr.net/gh/czy13724/LeviIcons@main/leviicons/spotify.png', type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点]}
+  - {name: 游戏系列, icon: 'https://fastly.jsdelivr.net/gh/czy13724/LeviIcons@main/leviicons/Panda.png', type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点]}
+  - {name: 兜底分流, icon: 'https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/friestash.png', type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, DIRECT]}
   # 节点地区分流
-
-  - {name: 香港节点, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png, type: url-test, interval: 300, include-all: true, filter: "(?i)🇭🇰|香港|(\b(HK|Hong)\b)"}
-
-  - {name: 美国节点, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png, type: url-test, interval: 300, include-all: true, filter: "(?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)"}
-
-  - {name: 狮城节点, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png, type: url-test, interval: 300, include-all: true, filter: "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)"}
-
-  - {name: 日本节点, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png, type: url-test, interval: 300, include-all: true, filter: "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)"}
-
-  - {name: 台湾节点, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png, type: url-test, interval: 300, include-all: true, filter: "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)"}
-
+  - {name: 香港节点, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png', type: url-test, interval: 300, include-all: true, filter: "(?i)🇭🇰|香港|(\b(HK|Hong)\b)"}
+  - {name: 美国节点, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png', type: url-test, interval: 300, include-all: true, filter: "(?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)"}
+  - {name: 狮城节点, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png', type: url-test, interval: 300, include-all: true, filter: "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)"}
+  - {name: 日本节点, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png', type: url-test, interval: 300, include-all: true, filter: "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)"}
+  - {name: 台湾节点, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png', type: url-test, interval: 300, include-all: true, filter: "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)"}
 rule-providers:
-
   # 局域网   
-  Lan: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/Lan.list}
-
+  Lan: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml'}
   #广告拦截
-  Reject: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/Reject.list}
-
+  Reject: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising.yaml'}
   # 苹果服务
-  Apple: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/Apple.list}
-  AppleProxy: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/AppleProxy.list}
-  
+  Apple: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple.yaml'}
+  AppleProxy: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/AppleProxy/AppleProxy.yaml'}
   # 微软服务 
-  Microsoft: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/Microsoft.list}
-  OneDrive: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/OneDrive.list}
-  Github: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/Github.list}
-
-  # 谷歌服务
-  Youtube: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/YouTube.list}
-  Google: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/Google.list}
-
-  # 电报消息
-  Telegram: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/Telegram.list}
-
-  # 推特消息
-  Twitter: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/Twitter.list}
-
-  # 游戏平台
-  Steam: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/Steam.list}
-  Epic: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/Epic.list}
-
-  # AI平台
-  AI: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/AI.list}
-
-  # Emby
-  Emby: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/Emby.list}
-
+  Microsoft: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml'}
+  OneDrive: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OneDrive/OneDrive.yaml'}
+  # GitHub
+  Github: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml'}
+  # YouTube
+  YouTube: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml'}
+  # Google
+  Google: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml'}
+  # Telegram
+  Telegram: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml'}
+  # Twitter
+  Twitter: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Twitter/Twitter.yaml'}
+  # 游戏系列
+  Steam: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Steam/Steam.yaml'}
+  Epic: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Epic/Epic.yaml'}
+  Sony: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Sony/Sony.yaml'}
+  Nintendo: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Nintendo/Nintendo.yaml'}
+  # 虚拟货币软件分流
+  Crypto: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/EAlyce/conf@main/Rule/Crypto.list'}
   # Spotify
-  Spotify: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/Spotify.list}
-  
-  # 国际媒体
-  Bahamut: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/Bahamut.list}
-  Netflix: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/Netflix.list}
-  Disney: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/Disney.list}
-  PrimeVideo: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/PrimeVideo.list}
-  HBO: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/HBO.list}
-  TikTok: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/TikTok.list}
-
+  Spotify: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.yaml'}
+  # Netflix 分流
+  Netflix: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix.yaml'}
+  # Disney 分流
+  Disney: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Disney/Disney.yaml'}
+  # 国外媒体分流
+  ProxyMedia: {behavior: classical, format: text, interval: 86400, url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list'}
+  # BiliBili 分流
+  BiliBili: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml'}
+  # 网易云音乐
+  NeteaseMusic: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/NetEaseMusic/NetEaseMusic.yaml'}
+  # 国内媒体
+  ChinaMedia: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMedia/ChinaMedia.yaml'}
+  # TikTok 分流
+  TikTok: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/TikTok/TikTok.yaml'}
+  # Talkatone 分流
+  Talkatone: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/czy13724/Surge@main/Rules/Talkatone.list'}
+  # SafeUM 分流
+  SafeUM: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/czy13724/Surge@main/Rules/SafeUM.list'}
+  # Paypal 分流
+  Paypal: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/PayPal/PayPal.yaml'}
+  # YouTubeMusic 分流
+  YouTubeMusic: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTubeMusic/YouTubeMusic.yaml'}
+  # OpenAI 分流
+  OpenAI: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml'}
+  # Claude 分流
+  Claude: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Claude/Claude.yaml'}
+  # Gemini 分流
+  Gemini: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Gemini/Gemini.yaml'}
+  # Reddit 分流
+  Reddit: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Reddit/Reddit.yaml'}
+  # WhatsApp 分流
+  WhatsApp: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Whatsapp/Whatsapp.yaml'}
+  # Instagram 分流
+  Instagram: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Instagram/Instagram.yaml'}
+  # LinkedIn 分流
+  LinkedIn: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/LinkedIn/LinkedIn.yaml'}
+  # LINE 分流
+  LINE: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Line/Line.yaml'}
+  # Facebook 分流
+  Facebook: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Facebook/Facebook.yaml'}
+  # Discord 分流
+  Discord: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Discord/Discord.yaml'}
+  # Verizon 分流
+  Verizon: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Verizon/Verizon.yaml'}
+  # GoogleVoice 分流
+  GoogleVoice: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GoogleVoice/GoogleVoice.yaml'}
+  # 规则修正
+  RuleFix: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Direct/Direct.yaml'}
+  # 中国大陆
+  ChinaMax: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMax/ChinaMax.yaml'}
+  China_Domain: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China_Domain.yaml'}
+  China_Classical: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China_Classical.yaml'}
+  # 隐私域名
+  Privacy_Domain: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Privacy/Privacy_Domain.yaml'}
+  # 隐私域名
+  Privacy: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Privacy/Privacy.yaml'}
+  # 劫持域名
+  Hijacking: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Hijacking/Hijacking.yaml'}
+  # 封禁HTTPDNS
+  BlockHttpDNS: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BlockHttpDNS/BlockHttpDNS.yaml'}
   # 代理网站
-  ProxyGFW: {behavior: classical, format: text, interval: 86400, url: https://github.com/Repcz/Tool/raw/X/Stash/Rules/ProxyGFW.list}
-
+  ProxyGFW: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/ProxyGFW.list'}
+  # 代理网站
+  Proxy: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy.yaml'}
+  # 代理网站
+  Proxy_Domain: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy_Domain.yaml'}
+  # 代理网站
+  Global: {behavior: classical, format: text, interval: 86400, url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Global/Global.yaml'}
 rules:
-  - RULE-SET,Reject,REJECT
-  - RULE-SET,AI,AI
-  - RULE-SET,Github,微软服务
-  - RULE-SET,OneDrive,微软服务
-  - RULE-SET,Microsoft,微软服务
-  - RULE-SET,Youtube,谷歌服务
-  - RULE-SET,Google,谷歌服务
-  - RULE-SET,Twitter,推特消息
-  - RULE-SET,Telegram,电报消息
-# - PROCESS-NAME,Telegram,REJECT-DROP # For Telegram macOS
-  - RULE-SET,Steam,游戏平台
-  - RULE-SET,Epic,游戏平台
-  - RULE-SET,Emby,Emby
-  - RULE-SET,Bahamut,国际媒体
-  - RULE-SET,Netflix,国际媒体
-  - RULE-SET,Disney,国际媒体
-  - RULE-SET,PrimeVideo,国际媒体
-  - RULE-SET,HBO,国际媒体
-  - RULE-SET,TikTok,国际媒体
-  - RULE-SET,Spotify,Spotify
-  - RULE-SET,ProxyGFW,国外网站
-  - RULE-SET,AppleProxy,国外网站
-  - RULE-SET,Apple,DIRECT
-  - RULE-SET,Lan,DIRECT
-  - GEOIP,CN,DIRECT
-  - MATCH,兜底分流
+  - DOMAIN-SUFFIX,jsdelivr.net,DIRECT # jsdelivr.net 镜像加速
+  - RULE-SET,Reject,REJECT # 去广告
+  - RULE-SET,Apple,DIRECT # Apple 分流
+  - RULE-SET,AppleProxy,DIRECT # Apple 分流
+  - RULE-SET,Lan,DIRECT # LAN
+  - RULE-SET,Telegram,Telegram # Telegram 分流
+   # Telegram 分流 For Telegram macOS：- PROCESS-NAME,Telegram,Telegram
+  - IP-CIDR,95.161.76.100/31,REJECT,no-resolve # Telegram 分流
+  - RULE-SET,Github,日本节点 # GitHub 分流
+  - RULE-SET,YouTube,YouTube # YouTube 分流
+  - RULE-SET,YouTubeMusic,YouTube # YouTubeMusic 分流
+  - RULE-SET,Google,Google # Google 分流
+  - RULE-SET,TikTok,TikTok # TikTok 分流
+  - RULE-SET,Twitter,社交媒体 # Twitter 分流
+  - RULE-SET,Talkatone,Talkatone # Talkatone 分流
+  - RULE-SET,Paypal,美国节点 # PayPal 分流
+  - RULE-SET,OpenAI,AI系列 # ChatGPT 分流
+  - RULE-SET,Claude,AI系列 # Claude 分流
+  - RULE-SET,Gemini,AI系列 # Gemini 分流
+  - RULE-SET,Crypto,指定加速 # 虚拟加密货币 分流
+  - RULE-SET,Spotify,Spotify # Spotify 分流
+  - RULE-SET,SafeUM,SafeUM # SafeUM 分流
+  - RULE-SET,WhatsApp,社交媒体 # WhatsApp 分流
+  - RULE-SET,Instagram,社交媒体 # Instagram 分流
+  - RULE-SET,LinkedIn,社交媒体 # LinkedIn 分流
+  - RULE-SET,Facebook,社交媒体 # Facebook 分流
+  - RULE-SET,Discord,社交媒体 # Discord 分流
+  - RULE-SET,LINE,社交媒体 # LINE 分流
+  - RULE-SET,Reddit,社交媒体 # Reddit 分流
+  - RULE-SET,GoogleVoice,美国节点 # GoogleVoice 分流
+  - RULE-SET,Verizon,美国节点 # Verizon 分流
+  - RULE-SET,Netflix,国际媒体 # Netflix 分流
+  - RULE-SET,Disney,国际媒体 # Disney 分流
+  - RULE-SET,ProxyMedia,国际媒体 # 国际媒体 分流
+  - RULE-SET,Privacy,REJECT # 隐私 劫持
+  - RULE-SET,Privacy_Domain,REJECT # 隐私域名 劫持
+  - RULE-SET,BlockHttpDNS,REJECT # HTTPDNS 拦截
+  - RULE-SET,Hijacking,REJECT
+  - RULE-SET,Global,指定加速 # 全球加速 分流
+  - RULE-SET,Proxy,指定加速 # 代理 分流
+  - RULE-SET,ProxyGFW,指定加速 # 代理分流
+  - RULE-SET,Proxy_Domain,指定加速 # 代理域名 分流
+  - RULE-SET,BiliBili,BiliBili # BiliBili 分流
+  - RULE-SET,Sony,游戏系列 # Sony 分流
+  - RULE-SET,Steam,游戏系列 # Steam 分流
+  - RULE-SET,Epic,游戏系列 # Epic 分流
+  - RULE-SET,Nintendo,游戏系列 # Nintendo 分流
+  - RULE-SET,ChinaMedia,DIRECT # 国内媒体 分流
+  - RULE-SET,Microsoft,DIRECT # Microsoft 分流
+  - RULE-SET,OneDrive,DIRECT # OneDrive 分流
+  - RULE-SET,NeteaseMusic,DIRECT # 网易云音乐 分流
+  - RULE-SET,China_Classical,DIRECT # 常见国内域名 分流
+  - RULE-SET,China_Domain,DIRECT # 常见国内域名 分流
+  - RULE-SET,ChinaMax,DIRECT # 常见国内域名 分流
+  - RULE-SET,RuleFix,DIRECT # 规则修正
+  - GEOIP,CN,DIRECT # 中国
+  - MATCH,兜底分流 # 兜底分流
+  - IP-CIDR,127.0.0.0/8,DIRECT # 防止应用循环请求
+  - IP-CIDR,172.16.0.0/12,DIRECT # 防止应用循环请求
+  - IP-CIDR,10.0.0.0/8,DIRECT # 防止应用循环请求
+  - IP-CIDR,192.168.0.0/16,DIRECT # 防止应用循环请求
+  - IP-CIDR,0.0.0.0/32,REJECT # 防止应用循环请求
+http:
+  url-rewrite:
+    - ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+    - ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
+  header-rewrite:
+    - ^https:\/\/(github\.com|(raw|gist|avatars)\.githubusercontent\.com)\/ request-replace-regex Accept-Language zh-CN en-us
