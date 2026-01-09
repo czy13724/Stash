@@ -1,6 +1,7 @@
 # 🚀 Stash Rules Description / 规则说明
 
 > ⚠️ **Notice / 注意**
+
 > This repository is customized for personal use. Public usage is **not recommended**.
 > 本规则库仅用于个人定制，**不建议**普通用户使用。
 
